@@ -1,10 +1,6 @@
 {
   "name": "kotlin-spring-realworld",
-  "user": "ubuntu",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "install": "mvn -B -q dependency:go-offline",
+  "install": "sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends maven && mvn -B -q dependency:go-offline",
   "terminals": [
     {
       "name": "api",
