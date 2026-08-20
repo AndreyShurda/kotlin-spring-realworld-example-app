@@ -1,0 +1,21 @@
+{
+  "name": "kotlin-spring-realworld",
+  "user": "ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "install": "mvn -B -q dependency:go-offline",
+  "terminals": [
+    {
+      "name": "api",
+      "command": "mvn -B spring-boot:run",
+      "description": "Runs the Spring Boot RealWorld API on http://localhost:8080 (endpoints under /api)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "api",
+      "port": 8080
+    }
+  ]
+}
